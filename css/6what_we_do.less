@@ -1,0 +1,152 @@
+@import "custom/vars.less"; // Variables and Constants
+
+section.what_we_do{
+    .flex(flex,column, space-around ,center);
+    height: 900px;
+    width: 1200px;
+    article.text{
+        .flex(flex,column, space-around ,center);
+    }
+    article.what_we_do{
+        width: 100%;
+        .flex(flex,row, space-between ,center);
+        div.wwd_photo{
+            width: 570px;
+            height: 380px;
+            background: url('../assets/wwd_photo.png');
+        }
+        div.wwd_slider{
+            div{
+                border-style: solid;
+                border-width: 1px;
+                border-color:  #e5e5e5;
+                box-sizing: border-box;
+                background-color:  rgba(0, 0, 0, 0);
+                width: 100%;
+                
+            }
+            div.button{
+                .flex(flex,row, space-between ,center);
+                height: 60px;
+                cursor: pointer;
+                div.wwd_icon{
+                    .flex(flex,row, space-around ,center);
+                    width: 150px;
+                    margin: 15px;
+                    height: 100%;
+                    border: 0px;
+                    span{
+                        .text('Montserrat',#333333,14px,400,14px,left,uppercase);
+                        margin: 10px;
+                    }
+                }
+                img.arrow{
+                    margin-right: 20px;
+                }
+            }
+            div.text{
+                p{
+                    .text('Roboto',#999999,15px,300,24px,left,none);
+                    display: block;
+                    margin: 15px;
+                    font-style: italic;
+                    width: 90%;
+                }
+                height: 200px;
+                overflow: scroll;
+            }
+            width: 570px;
+            height: 380px;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    section.what_we_do{
+        width: 760px;
+        article.text{
+            .flex(flex,column, space-around ,center);
+            p.title4{
+                width: 100%;
+            }
+        }
+        article.what_we_do{
+            width: 100%;
+            .flex(flex,row, space-between ,center);
+            div.wwd_photo{
+                width: 360px;
+                height: 380px;
+                background: url('../assets/wwd_photo.png');
+            }
+            div.wwd_slider{
+                div{
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color:  #e5e5e5;
+                    box-sizing: border-box;
+                    background-color:  rgba(0, 0, 0, 0);
+                    width: 100%;
+                    
+                }
+                div.button{
+                    height: 60px;
+                    cursor: pointer;
+                }
+                div.text{
+                    height: 200px;
+                }
+                width: 360px;
+                height: 380px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px){
+
+    section.what_we_do{
+        width: 380px;
+        height: 1300px;
+        article.text{
+            .flex(flex,column, space-around ,center);
+            p.title4{
+                width: 100%;
+            }
+        }
+        article.what_we_do{
+            width: 100%;
+            height: 800px;
+            .flex(flex,column, space-between ,center);
+            div.wwd_photo{
+                width: 360px;
+                height: 380px;
+                background: url('../assets/wwd_photo.png');
+            }
+            div.wwd_slider{
+                div{
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color:  #e5e5e5;
+                    box-sizing: border-box;
+                    background-color:  rgba(0, 0, 0, 0);
+                    width: 100%;
+                    
+                }
+                div.button{
+                    height: 60px;
+                    cursor: pointer;
+                }
+                div.text{
+                    height: 200px;
+                }
+                width: 360px;
+                height: 380px;
+            }
+        }
+    }
+}

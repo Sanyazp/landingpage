@@ -1,0 +1,140 @@
+@import "custom/vars.less"; // Variables and Constants
+
+section.footer{
+    .flex(flex,row, center ,center);
+    background-color:  #f8f8f8;
+    height: 560px;
+    width: 100%;
+    article.footer{
+        .flex(flex,row, space-between ,center);
+        width: 1200px;
+        height: 100%;
+        article.MoGo{
+            h2.footer_MoGo{
+                .text('Montserrat',#cccccc,46px,700,46px,left, none);
+            }
+            p.footer_MoGo{
+                margin-top: 45px;
+                margin-bottom: 45px;
+                .text('Roboto',#999999,15px,400,24px,left, none);
+            }
+            h3.footer_MoGo{
+                .text('Montserrat',#333333,18px,700,24px,left, none);
+                border-bottom: 1px solid rgba(000, 000, 000, 0.3);
+                padding: 10px;
+            }
+            article.social{
+                .flex(flex,row, space-between ,center);
+                width: 100%;
+                height: 20px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                span{
+                    .text('Roboto',#999999,15px,300,24px,left, none);
+                    font-style: italic;
+                }
+            }
+            form{
+                .flex(flex,row, flex-start ,center);
+
+                button{
+                    background-color:  #95e1d3;
+                    width: 40%;
+                    height: 40px;
+                    border: 0px;
+                    text-transform: uppercase;
+                    .text('Montserrat',#333333,14px,300,18px,center, none);
+                }
+                input{
+                    border-style: solid;
+                    border-width: 1px;
+                    border-color:  #e7e7e7;
+                    box-sizing: border-box;
+                    background-color:  #ffffff;
+                    width: 60%;
+                    height: 40px;
+                    .text('Montserrat',#333333,14px,300,18px,center, none);
+                }
+            }
+            width: 30%;
+            height: 100%;
+        }
+        article.footer_blog{
+            width: 30%;
+            height: 100%;
+            h2.footer_blog{
+                .text('Montserrat',#333333,14px,400,18px,left, none);
+                margin-top: 80px;
+            }
+            article.blogs{
+                margin-top: 40px;
+                .flex(flex, column, space-between ,'');
+                height: 350px;
+                div.footer_bl{
+                    height: 80px;
+                    width: 100%;
+                    .flex(flex, row, '' ,center);
+                    div.bl_info{
+                        .flex(flex,column, '' ,flex-start);
+                        width: 100%;
+                        margin: 20px;
+                        h2{
+                            .text('Montserrat',#333333,12px,400,18px,center, uppercase);
+                        }
+                        span{
+                            display: block;
+                            .text('Roboto',#999999,13px,300,24px,left, none);
+                            font-style: italic;
+                        }
+                    }
+
+                }
+            }
+
+        }
+        article.footer_inst{
+            width: 30%;
+            height: 100%;
+            h2.footer_inst{
+                .text('Montserrat',#333333,14px,400,24px,left, none);
+                margin-top: 80px;
+            }
+            div.photos{
+                margin-top: 40px;
+                .flex(flex,row, space-between ,center);
+                flex-wrap: wrap;
+                width: 280px;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 1200px){
+    section.footer{
+        article.footer{
+            width: 760px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px){
+    section.footer{
+        article.footer{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            article.MoGo{
+                form{
+                    button{
+                        font-size: 10px;/* Приближение из-за подстановки шрифтов */
+                    }
+                    input{
+                        font-size: 10px;/* Приближение из-за подстановки шрифтов */
+                    }
+                }
+            }
+        }
+    }
+}

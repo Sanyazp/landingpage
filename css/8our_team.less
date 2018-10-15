@@ -1,0 +1,120 @@
+@import "custom/vars.less"; // Variables and Constants
+
+section.our_team{
+    .flex(flex,column, space-around ,center);
+    width: 1200px;
+    height: 1050px;
+    background: #fff;
+    article.text{
+        .flex(flex,column, space-around ,center);
+    }
+    article.team{
+        width: 100%;
+        .flex(flex,row, space-between ,center);
+        article.Oteam{
+            margin-bottom: 60px;
+            .flex(flex,column, space-between ,center);
+            div.bg{
+                width: 380px;
+                height: 470px;
+                background: #95e1d3;
+                div.a{
+                    position: relative;
+                    cursor: pointer;
+                    top: 0px;
+                    left: 0px;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    div.social{
+                        .flex(none,row, space-between ,center);
+                        position: absolute;
+                        top: ~"calc(50% - 38px)";
+                        left: ~"calc(50% - 122px)";
+                        background-color:  #fce38a;
+                        height: 56px;
+                        width: 225px;
+                        z-index: 4;
+                        a{
+                            .flex(flex,row, center ,center);
+                            position: relative;
+                            top:0px;
+                            left: 0px;
+                            width: 25%;
+                            height: 100%;
+                            background-position: center;
+                        }
+                        a.facebook{
+                            background: url('../assets/social/facebook.png') no-repeat center;
+
+                        }
+                        a.facebook:hover{
+                            background: url('../assets/social/facebook_h.png') no-repeat center;
+                        }
+                        a.twitter{
+                            background: url('../assets/social/twitter.png') no-repeat center;
+                        }
+                        a.twitter:hover{
+                            background: url('../assets/social/twitter_h.png') no-repeat center;
+                        }
+                        a.pinterest{
+                            background: url('../assets/social/pinterest.png') no-repeat center;
+                        }
+                        a.pinterest:hover{
+                            background: url('../assets/social/pinterest_h.png') no-repeat center;
+                        }
+                        a.instagram{
+                            background: url('../assets/social/instagram.png') no-repeat center;
+                        }
+                        a.instagram:hover{
+                            background: url('../assets/social/instagram_h.png') no-repeat center;
+                        }
+                    }
+                    
+                }
+                .team1{
+                    background: url('../assets/team1.png');
+                }
+                .team2{
+                    background: url('../assets/team2.png');
+                }
+                .team3{
+                    background: url('../assets/team3.png');
+                }
+                div.a:hover{
+                    div.bg{
+                        z-index: -1;
+                    }
+                        top: -10px;
+                        left: -10px;
+                    &::before{
+                        .flex(flex,row, center ,center);
+                        content: '';
+                        position: absolute;
+                        opacity: 0.9;
+                        background: linear-gradient(to top, rgba(252,227,138,1) 0%,rgba(243,129,129,1) 100%);
+                        height: 100%;
+                        width: 100%;
+                        z-index: 2;
+                    }
+                    div.social{
+                        display: flex;
+                    }
+                }
+            }
+            div.about{
+                height: 70px;
+                width: 380px;
+            }
+        }
+    }
+}
+
+
+
+section.brands{
+    .flex(flex,column, center ,center);
+    background-color:  #f8f8f8;
+    width: 100%;
+    height: 250px;
+}

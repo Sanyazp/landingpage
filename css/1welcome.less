@@ -1,0 +1,180 @@
+/// SECTION WELCOME //
+// SECTION WELCOME //
+// SECTION WELCOME //
+@import "custom/normal.less"; // Margin:0 ; Padding : 0;
+@import "custom/vars.less"; // Variables and Constants
+@import "custom/scroll.less"; // Page scroll properties
+@import "custom/mediarq.less"; // Media Requests for Tablet and Phone
+section.welcome::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    opacity: 0.9;
+    right: 0px;
+    height: 100%;
+    width: 100%;
+    background: blue;
+    z-index: 2;
+    background: rgb(252,227,138); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(252,227,138,1) 0%, rgba(243,129,129,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(252,227,138,1) 0%,rgba(243,129,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top, rgba(252,227,138,1) 0%,rgba(243,129,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+section.welcome{
+    z-index: 1;
+    position: relative;
+    .flex(flex,column, space-between ,center);
+    width: 100%;
+    height: 1000px;
+    background: url('../assets/section_welcome.png');
+    header{
+        .flex(flex,row, space-between ,center);
+        z-index: 3;
+        width: 1200px;
+        height: 65px;
+        span{
+            .text('Montserrat',#ffffff,30px,700,0,left,none);
+        }
+        nav{
+            .flex(flex,row, space-around ,center);
+            width: 50%;
+            a{
+                .text('Montserrat',#ffffff,14px,400,0,center,none);
+            }
+            a:hover{
+                color:  #fce38a;
+            }
+        }
+    }
+    article.welcome_text{
+        z-index: 3;
+        .flex(flex,column, space-around ,center);
+        height: 600px;
+        width: 800px;
+        h2{
+            .text('Kaushan Script',#ffffff,72px,400,0,center,none);
+        }
+        h1{
+            .text('Montserrat',#ffffff,150px,700,140px,center,uppercase);
+        }
+        span{
+            display: flex;
+            background-color:  #ffffff;
+            width: 60px;
+            height: 3px;
+        }
+        a{
+            .flex(flex,row, center ,center);
+            .text('Montserrat',#ffffff,14px,700,0,center,none);
+            border: 3px solid #ffffff;
+            box-sizing: border-box;
+            background-color:  rgba(0, 0, 0, 0);
+            width: 160px;
+            height: 40px;
+        }
+        a:hover{
+            background-color:  rgba(243,129,129, 0.5);
+        }
+    }
+    article.welcome_footer{
+        z-index: 3;
+        .flex(flex,row, space-between , center);
+        height: 100px;
+        width: 1200px;
+            a{
+                width: 23%;
+                opacity: 0.5;
+                .flex(flex,column, space-around ,flex-start);
+                height: 50px;
+               span.line{
+                display: block;
+                position: relative;
+                background-color:  #ffffff;
+                width: 100%;
+                height: 3px;
+                span{
+                    display: block;
+                    top:0px;
+                    left: 0px;
+                    background-color:  #f38181;
+                    width: 70px;
+                    height: 3px;
+                }
+               }
+               h2{
+                .text('Montserrat',#ffffff,24px,700,0,left,none);
+               }
+               span{
+                .text('Montserrat',#ffffff,18px,400,0,left,none);
+               }
+            }
+            a:first-child, a:hover{
+                opacity: 1;
+            }
+    }
+}
+
+// SECTION WELCOME //
+// SECTION WELCOME //
+// SECTION WELCOME //
+
+
+@media screen and (max-width: 1200px){
+    section.welcome{
+        height: 735px;
+        header{
+            width: 760px;
+            .flex(flex,column, space-between ,center);
+            margin-top: 35px;
+            nav{
+                .flex(flex,row, space-around ,center);
+                width: 70%;
+            }
+
+        }    
+        article.welcome_text{
+            height: 400px;
+            width: 500px;
+            h2{
+                .text('Kaushan Script',#ffffff,36px,400,0,center,none);
+            }
+            h1{
+                .text('Montserrat',#ffffff,100px,700,100px,center,uppercase);
+            }
+        }
+        article.welcome_footer{
+            width: 760px;
+        }
+    }
+}
+
+@media screen and (max-width: 760px){
+    section.welcome{
+        .flex(flex,column, space-around ,center);
+        height: 735px;
+        header{
+            width: 400px;
+            .flex(flex,column, space-between ,center);
+            margin-top: 0px;
+            nav{
+                .flex(flex,row, space-around ,center);
+                width: 70%;
+            }
+
+        }    
+        article.welcome_text{
+            height: 400px;
+            width: 300px;
+            h2{
+                .text('Kaushan Script',#ffffff,36px,400,36px,center,none);
+            }
+            h1{
+                .text('Montserrat',#ffffff,50px,700,50px,center,uppercase);
+            }
+        }
+        article.welcome_footer{
+            width: 380px;
+            display: none;
+        }
+    } 
+}

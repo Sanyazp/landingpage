@@ -1,0 +1,46 @@
+@import "custom/vars.less"; // Variables and Constants
+
+section.design{
+    .flex(flex,column, space-between ,center);
+    height: 850px;
+    width: 100%;
+    background: url('../assets/design_background.png');
+    article.text{
+        margin-top: 90px;
+        .flex(flex,column, space-around ,center);
+    }
+    article.devices{
+        position: relative;
+        height: 582px;
+        width: 477px;
+        background: url('../assets/design_tablet.png') no-repeat;
+        div.mobile{
+            position: absolute;
+            bottom: -20%;
+            left: 75%;
+            height: 476px;
+            width: 274px;
+            background: url('../assets/design_mobile.png') no-repeat;
+        }
+    }
+}
+
+
+@media screen and (max-width: 760px){
+
+    section.design{
+        height: 650px;
+        article.devices{
+            height: 360px;
+            width: 300px;
+            background-size: contain;
+            div.mobile{
+                bottom: -20%;
+                left: 50%;
+                height: 250px;
+                width: 150px;
+                background-size: contain;
+            }
+        }
+    }
+}

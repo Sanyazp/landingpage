@@ -1,0 +1,91 @@
+@import "custom/vars.less"; // Variables and Constants
+section.blog{
+    .flex(flex,column, center ,center);
+    width: 1200px;
+    height: 770px;
+    article.text{
+        margin-top: 60px;
+        .flex(flex,column, space-around ,center);
+    }
+    article.blog{
+        .flex(flex,row, space-between ,center);
+        height: 400px;
+        width: 100%;
+        div{
+            .flex(flex,column, flex-start ,flex-start);
+            width: 380px;
+            height: 100%;
+            a{
+                display: block;
+                position: relative;
+                span.date{
+                    .flex(flex,column, center ,center);
+                    position: absolute;
+                    background-color:  #95e1d3;
+                    width: 60px;
+                    height: 70px;
+                    top:160px;
+                    left: -10px;
+                    span.day{
+                        .text('Montserrat',#ffffff,30px,700,30px,center,none);
+                    }
+                    span.month{
+                        .text('Roboto',#ffffff,15px,300,24px,center,none);
+                        font-style: italic;
+                    }
+                }
+            }
+            h2{
+                .text('Montserrat',#333333,14px,400,24px,left,uppercase);
+                margin-bottom: 20px;
+                margin-top: 20px;
+            }
+            p{
+                .text('Roboto',#999999,15px,400,24px,left,none);
+                margin-bottom: 10px;
+            }
+            hr{
+                width: 100%;
+                height: 1px;
+                background: #999999;
+                opacity: 0.2;
+            }
+            div.info{
+                width: 25%;
+                .flex(flex,row, space-between ,center);
+                div.view{
+                    width: 40%;
+                    .flex(flex,row, space-between ,center);
+                    span.view{
+                        width: 20px;
+                        height: 12px;
+                        display: block;
+                        background: url('../assets/view.png') no-repeat center;
+                    }
+                    span{
+                        display: block;
+                        .text('Roboto',#999999,15px,300,24px,left,none);
+                        font-style: italic;
+                    }
+                }
+                div.comms{
+                    width: 40%;
+                    .flex(flex,row, space-between ,center);
+                    span.comms{
+                        width: 20px;
+                        height: 12px;
+                        display: block;
+                        background: url('../assets/comms.png') no-repeat center;
+                    }
+                    span{
+                        .text('Roboto',#999999,15px,300,24px,left,none);
+                        display: block;
+                        font-style: italic;
+                    }
+                }
+
+            }
+        }
+    }
+}
+

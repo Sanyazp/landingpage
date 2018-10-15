@@ -1,0 +1,85 @@
+
+@import "custom/fonts.less"; // Fonts 
+ /// 
+
+
+ ///
+@import "custom/normal.less"; // Margin:0 ; Padding : 0;
+@import "custom/vars.less"; // Variables and Constants
+@import "custom/scroll.less"; // Page scroll properties
+@import "custom/mediarq.less"; // Media Requests for Tablet and Phone
+
+/// 
+
+
+///
+@import "1welcome.less"; // Welcome section
+@import "2story_about_us.less"; // Story about us section
+@import "3counter.less"; // Counter section 
+@import "4services.less"; // Services section 
+@import "5design.less"; // Design Section
+@import "6what_we_do.less"; // WWD section
+@import "7quote_slider.less"; // Quote Slider section
+@import "8our_team.less"; // Our Team section
+@import "9some_works.less"; // Some Works Section
+@import "10quote_slider2.less"; // Quote Slider 2 section
+@import "11people_say.less"; // People Say Section
+@import "12blog.less"; // Blog section
+@import "13map.less"; // Map Section
+@import "14footer.less"; // Footer section
+
+/// 
+
+body{
+    margin: auto;
+    .flex(flex,column, none ,center);
+    max-width: 1920px;
+}
+@media screen and (max-width: 1200px){
+    body{
+        max-width: 1200px;
+    }
+    section.quote_slider{
+        display: none;
+    }
+    section.our_team{
+        display: none;
+    }
+    section.some_works{
+        display: none;
+    }
+    section.brands{
+        display: none;
+    }
+    section.people_say{
+        display: none;
+    }
+    section.blog{
+        display: none;
+    }
+    section.map{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 760px){
+    body{
+        max-width: 760px;
+    }
+    section.quote_slider2{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

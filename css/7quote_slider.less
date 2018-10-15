@@ -1,0 +1,59 @@
+
+@import "custom/vars.less"; // Variables and Constants
+section.quote_slider{
+    .flex(flex,row, center ,center);
+    background-color:  #f8f8f8;
+    width: 100%;
+    height: 290px;
+    article.qSlider{
+        .flex(flex,row, space-between ,center);
+        width: 1200px;
+        height: 100%;
+        div.arrow{
+            cursor: pointer;
+            .flex(flex,row, center ,center);
+            width: 10%;
+            height: 100%;
+        }
+        div.qSlider{
+            display: inline-block;
+            position: relative;
+            width: 960px;
+            height: 100%;
+            overflow: hidden;
+            div.qSlider_el{
+                .flex(flex,row, center ,center);
+                position: absolute;
+                width: 960px;
+                height: 100%;
+                transition: all 0.3s linear;
+                div.qSlider_logo{
+                    .flex(flex,row, center ,center);
+                    width: 20%;
+                    height: 100%;
+                }
+                div.qSlider_text{
+                    
+                    p.qSlider_quote_text{
+                        .text('Roboto',#999999,24px,300,36px,left,none);
+                        width: 100%;
+                        height: 70%;
+                        font-style: italic;
+                    }
+                    div.qSlider_text_name{
+                        .flex(flex,row, space-between ,center);
+                        width: 23%;
+                        height: 30%;
+                        span.qSlider_quote_name{
+                            .text('Kaushan Script',#333333,24px,400,36px,left,none);
+                        }
+                    }
+                    width: 80%;
+                    height: 50%;
+                    .flex(flex,column,'', '');
+                }
+            }
+        }
+    }
+}
+

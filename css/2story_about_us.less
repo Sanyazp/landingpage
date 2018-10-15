@@ -1,0 +1,127 @@
+// <!-- SECTION STORY ABOUT US -->
+// <!-- SECTION STORY ABOUT US -->
+// <!-- SECTION STORY ABOUT US -->
+@import "custom/normal.less"; // Margin:0 ; Padding : 0;
+@import "custom/vars.less"; // Variables and Constants
+@import "custom/scroll.less"; // Page scroll properties
+@import "custom/mediarq.less"; // Media Requests for Tablet and Phone
+section.story_about_us{
+    .flex(flex,column, space-around ,center);
+    width: 1200px;
+    height: 750px;
+    article.text{
+        .flex(flex,column, space-around ,center);
+        p.title4{
+            width: 100%;
+        }
+    }
+    article.gallery{
+        .flex(flex,row, space-between ,center);
+        width: 100%;
+        height: 250px;
+        margin-bottom: 50px;
+        div{
+            width: 31%;
+            background: #95e1d3;
+            height: 250px;
+            a{
+                position: relative;
+                top: 0px;
+                left: 0px;
+                opacity: 1;
+                display: block;
+                height: 100%;
+                width: 100%;
+                article{
+                    .flex(flex,column, space-around ,center);
+                    height: 50px;
+                    width: 250px;
+                    position: absolute;
+                    left: ~"calc(50% - 135px)";
+                    top: ~"calc(50% - 35px)";
+                    opacity: 0;
+                    z-index: 4;
+                    img{
+                        align-self: center;
+                        z-index: 4;
+                    }
+                    h2{
+                        .text('Montserrat',#ffffff,18px,700,0,center,uppercase);
+                        z-index: 4;
+                    }
+                }
+                img.block{
+                    display: block;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+            }
+            a:hover{
+                img.block{
+                    display: block;
+                    position: relative;
+                    top: -10px;
+                    left: -10px;
+                    z-index: 1;  
+                }
+                article{
+                    opacity: 1;
+                }
+                &::before{
+                    .flex(flex,row, center ,center);
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    opacity: 0.9;
+                    left: -10px;
+                    background: linear-gradient(to top, rgba(252,227,138,1) 0%,rgba(243,129,129,1) 100%);
+                    height: 250px;
+                    width: 100%;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+
+// <!-- SECTION STORY ABOUT US -->
+// <!-- SECTION STORY ABOUT US -->
+// <!-- SECTION STORY ABOUT US -->
+
+@media screen and (max-width: 1200px){
+
+    section.story_about_us { 
+        width: 760px;
+    }
+}
+
+@media screen and (max-width: 760px){
+
+    section.story_about_us{
+        width: 380px;
+        height: 1500px;
+        .flex(flex,column, space-around ,center);
+        article.text{
+            .flex(flex,column, space-around ,center);
+            p.title4{
+                width: 100%;
+            }
+        }
+        article.gallery{
+            .flex(flex,column, space-between ,center);
+            width: 100%;
+            margin-bottom: 50px;
+            height: 800px;
+            div{
+                width: 100%;
+                background: #95e1d3;
+                height: 250px;
+            }
+        }
+    }
+}
