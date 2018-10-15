@@ -39,10 +39,24 @@ section.welcome{
             .flex(flex,row, space-around ,center);
             width: 50%;
             a{
+                position: relative;
+                span.hover{
+                    position: absolute;
+                    display: block;
+                    width: 100%;
+                    bottom: -15px;
+                    left: 0px;
+                    opacity: 0;
+                    height: 3px;
+                    background: #fce38a;
+                }
                 .text('Montserrat',#ffffff,14px,400,0,center,none);
             }
             a:hover{
                 color:  #fce38a;
+                span.hover{
+                    opacity: 1;
+                }
             }
         }
     }

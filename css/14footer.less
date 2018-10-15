@@ -126,11 +126,9 @@ section.footer{
             height: 1500px;
             margin-top: 1000px;
             padding: 25px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            flex-direction: column;
+            .flex(flex,column, space-between ,flex-start);
             article.MoGo{
+                .flex(flex,column, space-around ,center);
                 width: 100%;
                 height: 33%;
                 form{
@@ -143,10 +141,12 @@ section.footer{
                 }
             }
             article.footer_inst{
+                .flex(flex,column, space-around ,center);
                 width: 100%;
                 height: 33%;
             }
             article.footer_blog{
+                .flex(flex,column, space-around ,center);
                 width: 100%;
                 height: 33%;
             }
